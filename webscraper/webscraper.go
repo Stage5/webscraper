@@ -11,6 +11,7 @@ type WebScraper interface {
 	GetHTMLNodeFromUrl(url string) (*html.Node, error)
 }
 
+// GetHTMLNodeFromUrl takes a string representing a URL and returns the root *html.Node of the corresponding webpage.
 func GetHTMLNodeFromUrl(url string) (*html.Node, error) {
 	resp, err := http.Get(url)
 	if err != nil {
